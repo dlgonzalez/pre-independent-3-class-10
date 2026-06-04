@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Independent 3 — Class 10</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #faf7f2;
+    color: #1a1a2e;
+    font-size: 15px;
+    line-height: 1.65;
+    padding: 0 0 3rem;
+  }
+
+  .header {
+    background: #1a2744;
+    color: #fff;
+    padding: 2rem 2.5rem 1.6rem;
+  }
+  .header-meta {
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #8fa3cc;
+    margin-bottom: .4rem;
+  }
+  .header h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+  }
+  .header-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: .8rem;
+  }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .tag-skills { background: #2d4a8a; color: #b8ccf0; }
+  .tag-grammar { background: #1e5c45; color: #a3d9c0; }
+  .tag-vocab { background: #6b3a1f; color: #f0c89a; }
+  .tag-film { background: #4a1a5e; color: #d4a8f0; }
+
+  .body { padding: 0 2.5rem; }
+
+  .section {
+    margin-top: 2.2rem;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+  .label-opening { background: #dbeafe; color: #1e40af; }
+  .label-vocab { background: #fef3c7; color: #92400e; }
+  .label-listening { background: #ede9fe; color: #5b21b6; }
+  .label-production { background: #dcfce7; color: #166534; }
+  .label-closing { background: #fce7f3; color: #9d174d; }
+
+  .section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: .6rem;
+    color: #1a2744;
+  }
+
+  p { margin-bottom: .7rem; }
+  p:last-child { margin-bottom: 0; }
+
+  ul, ol {
+    padding-left: 1.4rem;
+    margin-bottom: .7rem;
+  }
+  li { margin-bottom: .3rem; }
+
+  .activity-block {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-top: .8rem;
+  }
+  .activity-block + .activity-block { margin-top: .6rem; }
+
+  .activity-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    color: #6b7280;
+    margin-bottom: .5rem;
+  }
+
+  .grammar-box {
+    background: #1e2235;
+    color: #e2e8f4;
+    border-radius: 8px;
+    padding: .9rem 1.1rem;
+    font-family: 'DM Mono', 'Courier New', monospace;
+    font-size: 13.5px;
+    line-height: 1.7;
+    margin: .7rem 0;
+  }
+  .grammar-box .comment { color: #6b8abf; }
+  .grammar-box strong { color: #93c5fd; font-weight: 600; }
+
+  .sblock {
+    background: #eff6ff;
+    border-left: 3px solid #3b82f6;
+    border-radius: 0 8px 8px 0;
+    padding: .75rem 1rem;
+    margin: .7rem 0;
+    font-size: 14px;
+  }
+  .sblock-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    color: #2563eb;
+    margin-bottom: .3rem;
+  }
+
+  .ablock {
+    background: #f0fdf4;
+    border-left: 3px solid #22c55e;
+    border-radius: 0 8px 8px 0;
+    padding: .75rem 1rem;
+    margin: .7rem 0;
+    font-size: 14px;
+  }
+  .ablock details summary {
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    color: #16a34a;
+    list-style: none;
+    user-select: none;
+  }
+  .ablock details summary::-webkit-details-marker { display: none; }
+  .ablock details summary::before { content: '▶ '; font-size: 9px; }
+  .ablock details[open] summary::before { content: '▼ '; }
+  .ablock details .inner { margin-top: .5rem; color: #166534; }
+
+  .divider {
+    border: none;
+    border-top: 1px dashed #d1ccc4;
+    margin: 1.6rem 0 0;
+  }
+
+  .time-chip {
+    display: inline-block;
+    background: #f1ede6;
+    color: #6b5e4a;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .link-ref {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: .4rem;
+  }
+  .link-ref a { color: #2563eb; text-decoration: none; }
+  .link-ref a:hover { text-decoration: underline; }
+
+  table.vocab-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: .5rem;
+  }
+  table.vocab-table th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: #6b7280;
+    border-bottom: 1px solid #e2ddd4;
+    padding: 4px 8px 6px;
+  }
+  table.vocab-table td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #f0ece5;
+    vertical-align: top;
+  }
+  table.vocab-table tr:last-child td { border-bottom: none; }
+
+  .jigsaw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+    margin-top: .6rem;
+  }
+  .jigsaw-card {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: .6rem .8rem;
+    text-align: center;
+    font-size: 13px;
+  }
+  .jigsaw-card .student-num {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    color: #9ca3af;
+    margin-bottom: 3px;
+  }
+  .jigsaw-card .clip-label {
+    font-weight: 600;
+    color: #4a1a5e;
+    font-size: 13px;
+  }
+
+  .ai-panel {
+    background: #1a2744;
+    color: #c8d8f0;
+    border-radius: 10px;
+    padding: 1.1rem 1.3rem;
+    margin-top: .8rem;
+    font-size: 14px;
+  }
+  .ai-panel-header {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #8fa3cc;
+    margin-bottom: .6rem;
+  }
+  .ai-prompt {
+    background: #243558;
+    border-radius: 6px;
+    padding: .7rem .9rem;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #dce8f8;
+    white-space: pre-wrap;
+  }
+  .ai-fallback {
+    font-size: 12px;
+    color: #6b8abf;
+    margin-top: .5rem;
+  }
+  .ai-fallback a { color: #93c5fd; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-meta">Pre-Independent 3 · Class 10 · Virtual</div>
+  <h1>Space Exploration & <em>Passengers</em></h1>
+  <div class="header-tags">
+    <span class="tag tag-skills">Speaking</span>
+    <span class="tag tag-skills">Listening</span>
+    <span class="tag tag-vocab">Vocabulary</span>
+    <span class="tag tag-film">Film Work</span>
+  </div>
+</div>
+
+<div class="body">
+
+  <!-- SECTION 1: ORAL PRESENTATIONS -->
+  <div class="section">
+    <span class="section-label label-opening">Opening</span>
+    <h2>Student oral presentations <span class="time-chip">~25 min</span></h2>
+    <p>You prepared a short presentation on a space topic — either a summary of a TED-Ed video or a topic you investigated independently. Now it's time to share it.</p>
+
+    <div class="activity-block">
+      <div class="activity-title">Presentations</div>
+      <ul>
+        <li>Deliver your summary to the class. Aim for 1–2 minutes.</li>
+        <li>After each presentation, at least one classmate asks a follow-up question.</li>
+        <li>Try to connect ideas across presentations — did anyone choose a similar topic? Did you learn anything surprising?</li>
+      </ul>
+      <div class="link-ref">Reference resource: <a href="https://ed.ted.com/lessons?content_type%5B%5D=animations&content_type%5B%5D=talks&q=space" target="_blank">TED-Ed Space Lessons ↗</a></div>
+    </div>
+
+    <div class="sblock">
+      <div class="sblock-label">Speaking tip</div>
+      You don't need to memorize your presentation. Use notes, but try to look up and speak to your classmates rather than reading word for word. Use signal phrases like <em>"What I found most interesting was…"</em> or <em>"Something that surprised me was…"</em>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 2: SPACE EXPLORATION ACTIVITIES -->
+  <div class="section">
+    <span class="section-label label-vocab">Vocabulary & Discussion</span>
+    <h2>Space exploration: vocabulary & idioms <span class="time-chip">~25 min</span></h2>
+    <p>Before moving into the film, you work with key space vocabulary and expressions used in English to talk about remarkable or unusual things.</p>
+
+    <div class="activity-block">
+      <div class="activity-title">Activity A — Space vocabulary</div>
+      <p>Match the terms in the box to the descriptions or images your teacher presents. These words will come up throughout the class.</p>
+      <div class="grammar-box">
+        <span class="comment">// Key terms</span><br>
+        <strong>the force of gravity</strong> · <strong>the solar system</strong> · <strong>orbital station</strong><br>
+        <strong>galaxy</strong> · <strong>satellite</strong> · <strong>altitude</strong> · <strong>go into orbit</strong><br>
+        <strong>constellation</strong> · <strong>light-year</strong> · <strong>the Big Bang</strong><br>
+        <strong>eclipse</strong> · <strong>spacesuit</strong> · <strong>rocket</strong>
+      </div>
+    </div>
+
+    <div class="activity-block">
+      <div class="activity-title">Activity B — Space idioms</div>
+      <p>English uses space and sky to describe feelings and situations. Read each sentence and choose the correct meaning.</p>
+      <table class="vocab-table">
+        <thead>
+          <tr><th>Expression</th><th>Meaning</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><em>The sky is the limit.</em></td><td>The possibilities are endless.</td></tr>
+          <tr><td><em>Out of this world</em></td><td>Exceptional, extraordinary</td></tr>
+          <tr><td><em>Head in the clouds</em></td><td>Unrealistic, not thinking practically</td></tr>
+          <tr><td><em>Living on another planet</em></td><td>Behaving differently from others</td></tr>
+          <tr><td><em>Over the moon</em></td><td>Extremely happy</td></tr>
+          <tr><td><em>Down to earth</em></td><td>Practical and rational</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:.6rem;">Then complete the gap-fill sentences using the correct idiom from the list above.</p>
+
+      <div class="ablock">
+        <details>
+          <summary>Show answer key</summary>
+          <div class="inner">
+            <ol>
+              <li>down to earth</li>
+              <li>has her head in the clouds</li>
+              <li>out of this world</li>
+              <li>over the moon</li>
+              <li>the sky is the limit</li>
+              <li>living on another planet</li>
+            </ol>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="activity-block">
+      <div class="activity-title">Activity C — Quick discussion</div>
+      <ul>
+        <li>Do you know anyone who seems to be <em>living on another planet</em>?</li>
+        <li>When was the last time you felt <em>over the moon</em>?</li>
+        <li>Are you someone who tends to have their <em>head in the clouds</em>, or are you more <em>down to earth</em>?</li>
+        <li>What space-themed film do you think is <em>out of this world</em>? Why?</li>
+      </ul>
+    </div>
+
+    <div class="link-ref">Source activities: <a href="https://www.comfortenglish.com/space-exploration/" target="_blank">comfortenglish.com ↗</a></div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 3: PASSENGERS INTRO -->
+  <div class="section">
+    <span class="section-label label-listening">Listening</span>
+    <h2>Introduction to <em>Passengers</em> <span class="time-chip">~20 min</span></h2>
+    <p><em>Passengers</em> (2016) is a science fiction film set aboard a spacecraft called the <em>Avalon</em>, carrying 5,000 colonists on a 120-year journey to a distant planet called Homestead II. The passengers are in hibernation pods — but Jim wakes up 90 years too early.</p>
+
+    <div class="activity-block">
+      <div class="activity-title">Watch & work — Jim wakes up</div>
+      <p>Watch the first clip together and complete the activities on the page. You will practise:</p>
+      <ul>
+        <li>Listening for gist and specific information</li>
+        <li>Vocabulary in context</li>
+        <li>Comprehension questions</li>
+      </ul>
+      <div class="link-ref">Activity page: <a href="https://www.listeninenglish.com/ve235-passengers-jim-wakes-up.php" target="_blank">listeninenglish.com — Jim Wakes Up ↗</a></div>
+    </div>
+
+    <div class="sblock">
+      <div class="sblock-label">Before you watch</div>
+      Think about this: Jim wakes up alone on a spaceship with 90 years left in the journey. No one else is awake. What would you do in his situation? Share your ideas quickly with a partner.
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 4: INDEPENDENT FILM WORK -->
+  <div class="section">
+    <span class="section-label label-production">Independent work</span>
+    <h2>Choose your clip — individual film work <span class="time-chip">~20 min</span></h2>
+    <p>Each of you selects a different section of <em>Passengers</em> to work on independently. Use the listeninenglish.com format as your guide: watch your clip, complete the activities, and take notes for your summary.</p>
+
+    <div class="activity-block">
+      <div class="activity-title">Your task</div>
+      <ol>
+        <li>Choose a clip from the film (your teacher will assign sections to avoid overlap).</li>
+        <li>Watch your section and work through the exercises on the page.</li>
+        <li>Take notes: <em>What happens? Who is involved? What changes?</em></li>
+        <li>Prepare a 1–2 minute spoken summary to share with the class.</li>
+      </ol>
+    </div>
+
+    <div class="sblock">
+      <div class="sblock-label">How to structure your summary</div>
+      <ul>
+        <li><strong>Setting the scene:</strong> Where are we? What has happened so far?</li>
+        <li><strong>Main event:</strong> What happens in your section?</li>
+        <li><strong>Reaction / consequence:</strong> How do the characters respond? What does it mean for the story?</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 5: CLASS RECONSTRUCTION -->
+  <div class="section">
+    <span class="section-label label-closing">Closing</span>
+    <h2>Putting the film together <span class="time-chip">~15 min</span></h2>
+    <p>Each of you shares your section summary in order. Together, you will reconstruct the whole film — as if you're building a puzzle.</p>
+
+    <div class="activity-block">
+      <div class="activity-title">Class reconstruction</div>
+      <ul>
+        <li>Listen carefully to your classmates' summaries — you may hear details you missed.</li>
+        <li>After all summaries, discuss: <em>Did the film follow the direction you expected? Were there any surprises?</em></li>
+        <li>Final question: Would you recommend <em>Passengers</em>? Use one of today's idioms in your answer.</li>
+      </ul>
+    </div>
+
+    <div class="ai-panel">
+      <div class="ai-panel-header">AI feedback — summary check</div>
+      <div class="ai-prompt">You are an English language teacher giving warm, encouraging feedback to an adult B1 student.
+
+The student will paste their written summary of a film section from *Passengers*.
+
+Your feedback must:
+- Start by quoting one specific sentence the student wrote that worked well, and explain why
+- Write one complete model sentence that improves on something in their summary
+- Point out ONE grammar correction only — explain it briefly and clearly
+- End with one follow-up question to encourage them to say more about the film
+
+Keep your tone warm and conversational. Do not use bullet points in your response.</div>
+      <div class="ai-fallback">No access? Use the <a href="https://gemini.google.com" target="_blank">Gemini Gem fallback ↗</a> with the prompt above.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
